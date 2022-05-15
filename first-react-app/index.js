@@ -1,9 +1,17 @@
 function Header() {
     return (
-        <header>
+        <header className="header">
             <img width="50" src="./react-logo.png"/>
                 
-            <h1>Fun facts about React</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Pricing</a></li>
+
+                    <li><a href="#">About</a></li>
+
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </header>
     );
 }
@@ -11,6 +19,8 @@ function Header() {
 function MainComponent() {
     return (
         <div>
+            <h1>Fun facts about React</h1>
+
             <ul>
                 <li>Was first released in 2013</li>
                 
