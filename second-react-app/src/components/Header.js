@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header() {
     return (
-        <header class="header">
+        <header className="header">
             <div className="container">
                 <div className="header__logo">
                     <img src="./logo192.png" width="40" alt="logo"/>
