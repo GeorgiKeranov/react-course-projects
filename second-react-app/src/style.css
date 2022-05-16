@@ -1,27 +1,53 @@
+/* Reset browsers default styles */
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
-
+  
+/* Default styles for html elements */
 body {
     font-family: 'Inter', sans-serif;
+    font-size: 19px;
 }
 
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+/* Root */
+#root {
+    height: 100%;
+}
+
+/* App */
+.app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
 .container {
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
 }
 
-h3 {
-    font-size: 29px;
-    color: #60d8f8;
-}
-
+/* Header */
 .header {
     padding: 30px 0;
     background-color: #21222a;
@@ -39,12 +65,60 @@ h3 {
     align-items: center;
 }
 
+.header .header__logo h3 {
+    color: #60d8f8;
+}
+
 .header .header__logo img {
     margin-right: 10px;
 }
 
 .header .header__heading h4 {
+    color: #d8d8d8;
     font-weight: 600;
     font-size: 20px;
 }
+
+/* Main */
+.main {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    padding: 50px 0;
+    background: #282d35;
+    color: #fff;
+}
+
+.main:before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    content: '';
+    display: block;
+    width: 256px;
+    height: 256px;
+    background-image: url(../public/logo512-gray.png);
+    background-size: contain;
+}
+
+.main ul {
+    list-style: none;
+}
+
+.main li {
+    margin-bottom: 20px;
+}
+
+.main li:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #60d8f8;
+    margin-right: 10px;
+}
+
+
 
