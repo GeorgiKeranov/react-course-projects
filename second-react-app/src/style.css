@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 29px;
+    color: #60d8f8;
+}
+
+.header {
+    padding: 20px 0;
+    background-color: #21222a;
+    color: #fff;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .header__logo img {
+    margin-right: 10px;
+}
+
+.header .header__heading h4 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
