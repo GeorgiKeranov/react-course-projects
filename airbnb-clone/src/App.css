@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.1;
+}
+
+/* Container */
+.container {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Header */
+.header {
+    padding: 22px 0;
+    box-shadow: 0 0px 10px #ddd;
+}
+
+/* Section Intro */
+.section-intro {
+    padding: 30px 0;
+}
+
+.section-intro .section__image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-intro .section__text {
+    max-width: 350px;
+}
