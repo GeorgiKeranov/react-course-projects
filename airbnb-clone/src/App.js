@@ -1,9 +1,15 @@
+import React from 'react';
+import Header from './components/Header';
+import SectionIntro from './components/SectionIntro';
+import SectionExperiences from './components/SectionExperiences';
 import './App.css';
 
 function App() {
   return (
     <div className="app">
-        <h1>App</h1>
+        <Header />
+        <SectionIntro />
+        <SectionExperiences />
     </div>
   );
 }
