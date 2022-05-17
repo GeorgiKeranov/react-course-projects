@@ -7,7 +7,7 @@ body, html {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
@@ -31,20 +31,71 @@ body {
 
 /* Header */
 .header {
-    padding: 22px 0;
+    padding: 20px 0;
     box-shadow: 0 0px 10px #ddd;
 }
 
 /* Section Intro */
 .section-intro {
-    padding: 30px 0;
+    padding: 26px 0;
+    margin-bottom: 25px;
 }
 
 .section-intro .section__image {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .section-intro .section__text {
     max-width: 350px;
+}
+
+/* Card */
+.card {
+    width: 176px;
+}
+
+.card .card__image {
+    position: relative;
+    padding-bottom: 134%;
+    background-size: cover;
+    border-radius: 5px;
+    margin-bottom: 9px;
+}
+
+.card .card__label {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 5px 8px;
+    font-size: 10px;
+}
+
+.card .card__details {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.card .card__details p {
+    margin-bottom: 8px;
+}
+
+.card .card__rating-location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card .card__rating-location p {
+    margin-bottom: 0;
+}
+
+.card .card__rating-location img {
+    margin-right: 4px;
+}
+
+.card .card__rating-location span {
+    color: #918E9B;
 }

@@ -9,9 +9,9 @@ export default function Card() {
 
             <div className="card__details">
                 <div className="card__rating-location">
-                    <img src="/star.png" alt="star" />
+                    <img src="/star.png" alt="star" width="12" height="11" />
 
-                    <p>5.0 (6) · USA</p>
+                    <p>5.0 <span>(6) • USA</span></p>
                 </div>
 
                 <p>Life lessons with Katie Zaferes</p>
