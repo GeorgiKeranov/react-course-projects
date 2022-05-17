@@ -5,6 +5,7 @@ import data from '../data'
 export default function SectionCards() {
     const cards = data.map(card => {
         return <Card
+            key={card.id}
             image={card.image}
             status={card.status}
             rating={card.stats.rating}
