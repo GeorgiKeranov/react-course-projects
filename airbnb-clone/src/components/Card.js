@@ -18,7 +18,7 @@ export default function Card(props) {
                 <div className="card__rating-location">
                     <img src="/images/star.png" alt="star" width="12" height="11" />
 
-                    <p>{props.rating} <span>({props.reviewsCount}) • {props.location}</span></p>
+                    <p>{props.stats.rating} <span>({props.stats.reviewsCount}) • {props.location}</span></p>
                 </div>
 
                 <p>{props.title}</p>
