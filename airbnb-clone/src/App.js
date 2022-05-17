@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import SectionIntro from './components/SectionIntro';
-import SectionExperiences from './components/SectionExperiences';
+import SectionCards from './components/SectionCards';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="app">
         <Header />
         <SectionIntro />
-        <SectionExperiences />
+        <SectionCards />
     </div>
   );
 }
