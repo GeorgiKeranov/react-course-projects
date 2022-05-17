@@ -4,7 +4,7 @@ export default function Card(props) {
     return (
         <div className="card">
             <div className="card__image" style={{ backgroundImage: `url(/images/${props.image})` }}>
-                <div className="card__label">{props.status}</div>
+                {props.openSpots === 0 && <div className="card__label">SOLD OUT</div>}
             </div>
 
             <div className="card__details">

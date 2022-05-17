@@ -7,12 +7,12 @@ export default function SectionCards() {
         return <Card
             key={card.id}
             image={card.image}
-            status={card.status}
             rating={card.stats.rating}
             reviewsCount={card.stats.reviewsCount}
             location={card.location}
             title={card.title}
             price={card.price}
+            openSpots={card.openSpots}
         />
     });
 
