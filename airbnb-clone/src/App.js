@@ -7,9 +7,13 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-        <Header />
-        <SectionIntro />
-        <SectionCards />
+      <Header />
+
+      <div className="container">
+          <SectionIntro />
+          
+          <SectionCards />
+      </div>
     </div>
   );
 }

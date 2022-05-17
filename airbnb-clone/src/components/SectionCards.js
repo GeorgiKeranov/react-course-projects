@@ -17,9 +17,7 @@ export default function SectionCards() {
 
     return (
         <section className="section-cards">
-            <div className="container">
-                {cards}
-            </div>
+            {cards}
         </section>
     );
 }
