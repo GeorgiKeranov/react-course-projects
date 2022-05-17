@@ -50,6 +50,17 @@ body {
     max-width: 350px;
 }
 
+/* Section Cards */
+.section-cards {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+}
+
+.section-cards .card {
+    flex: 0 0 auto;
+}
+
 /* Card */
 .card {
     width: 176px;
