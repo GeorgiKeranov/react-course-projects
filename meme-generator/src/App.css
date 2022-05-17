@@ -81,3 +81,12 @@ body {
     padding: 10px;
     cursor: pointer;
 }
+
+.meme .meme__image {
+    margin-top: 36px;
+    text-align: center;
+}
+
+.meme .meme__image img {
+    max-width: 100%;
+}
