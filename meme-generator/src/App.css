@@ -7,6 +7,10 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+input {
+    font-family: inherit;
+}
+
 body {
     font-family: 'Karla', sans-serif;
 }
@@ -44,4 +48,36 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 500;
+}
+
+/* Meme */
+.meme {
+    padding: 36px;
+}
+
+.meme .meme__input-fields {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 15px;
+}
+
+.meme input[type="text"] {
+    padding: 10px;
+    flex: 1 1 50%;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    color: #0D0D0D;
+}
+
+.meme input[type="submit"] {
+    width: 100%;
+    background: linear-gradient(90deg, #672280, #A626D3);
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
 }
