@@ -2,29 +2,38 @@ import React from 'react';
 import memesData from '../memesData';
 
 function Meme() {
-    const [memeImage, setMemeImage] = React.useState('');
+    const [meme, setMeme] = React.useState({
+        image: '',
+        topText: '',
+        bottomText: ''
+    });
 
-    async function generateRandomMeme() {
+    function generateRandomMeme() {
         const memes = memesData.data.memes;
         const mathRandom = Math.random();
         const randomMemeIndex = Math.floor(mathRandom * memes.length);
 
         const randomMeme = memes[randomMemeIndex];
-        setMemeImage(randomMeme.url);
+        setMeme(prevMeme => {
+            return {
+                ...prevMeme,
+                image: randomMeme.url
+            };
+        });
     }
 
     return (
         <div className="meme">
             <div className="meme__input-fields">
-                <input type="text" name="meme-top-text" placeholder="Meme top text"/>
+                <input type="text" name="meme-top-text" placeholder="Meme top text" value={meme.topText}/>
 
-                <input type="text" name="meme-bottom-text" placeholder="Meme bottom text"/>
+                <input type="text" name="meme-bottom-text" placeholder="Meme bottom text" value={meme.bottomText}/>
             </div>
 
             <input type="submit" onClick={generateRandomMeme} value="Get a new meme image 🖼"/>
 
             <div className="meme__image">
-                <img src={memeImage} alt="meme" />
+                <img src={meme.image} alt="meme" />
             </div>
         </div>
     );
