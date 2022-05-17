@@ -5,7 +5,7 @@ export default function SectionIntro() {
         <section className="section-intro">
             <div className="container">
                 <div className="section__image">
-                    <img src="./intro-image.png" alt="intro" width="396" height="232" />
+                    <img src="/images/intro-image.png" alt="intro" width="396" height="232" />
                 </div>
 
                 <div className="section__text">
