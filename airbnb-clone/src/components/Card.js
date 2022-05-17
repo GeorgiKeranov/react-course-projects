@@ -1,10 +1,17 @@
 import React from 'react';
 
 export default function Card(props) {
+    let cardLabel;
+    if (props.openSpots === 0) {
+        cardLabel = 'SOLD OUT';
+    } else if (props.location === 'Online') {
+        cardLabel = "ONLINE";
+    }
+
     return (
         <div className="card">
             <div className="card__image" style={{ backgroundImage: `url(/images/${props.image})` }}>
-                {props.openSpots === 0 && <div className="card__label">SOLD OUT</div>}
+                {cardLabel && <div className="card__label">{cardLabel}</div>} 
             </div>
 
             <div className="card__details">

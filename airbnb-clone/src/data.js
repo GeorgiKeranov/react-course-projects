@@ -22,7 +22,7 @@ const data = [
             rating: 5.0,
             reviewsCount: 30
         },
-        location: "USA",
+        location: "Online",
         openSpots: 27,
     },
     {
