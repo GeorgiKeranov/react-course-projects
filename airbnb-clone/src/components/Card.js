@@ -1,22 +1,22 @@
 import React from 'react';
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div className="card">
-            <div className="card__image" style={{ backgroundImage: 'url(/katie-zaferes.png)' }}>
-                <div className="card__label">SOLD OUT</div>
+            <div className="card__image" style={{ backgroundImage: `url(/${props.image})` }}>
+                <div className="card__label">{props.status}</div>
             </div>
 
             <div className="card__details">
                 <div className="card__rating-location">
                     <img src="/star.png" alt="star" width="12" height="11" />
 
-                    <p>5.0 <span>(6) • USA</span></p>
+                    <p>{props.rating} <span>({props.reviews}) • {props.location}</span></p>
                 </div>
 
-                <p>Life lessons with Katie Zaferes</p>
+                <p>{props.text}</p>
 
-                <p><strong>From $136</strong> / person</p>
+                <p><strong>From ${props.price}</strong> / person</p>
             </div>
         </div>
     );
