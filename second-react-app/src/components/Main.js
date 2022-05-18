@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Main() {
     return (
-        <main className="main">
+        <main className="main main--dark">
             <div className="container">
                 <h1>Fun facts about React</h1>
 
