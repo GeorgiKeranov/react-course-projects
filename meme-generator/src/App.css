@@ -83,10 +83,42 @@ body {
 }
 
 .meme .meme__image {
+    position: relative;
     margin-top: 36px;
     text-align: center;
 }
 
 .meme .meme__image img {
     max-width: 100%;
+}
+
+.meme .meme__image h2 {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.meme .meme__top-text {
+    top: 0;
+}
+
+.meme .meme__bottom-text {
+    bottom: 0;
 }
