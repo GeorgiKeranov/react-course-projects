@@ -1,4 +1,8 @@
 /* Reset browsers default styles */
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -50,8 +54,10 @@ h3 {
 /* Header */
 .header {
     padding: 30px 0;
-    background-color: #21222a;
-    color: #fff;
+    background-color: #fff;
+    color: #21222a;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 .header .container {
@@ -110,10 +116,6 @@ h3 {
     border-radius: 50%;
 }
 
-.header--dark .header__toggler-circle {
-    background-color: black;
-}
-
 .header .header__toggler-light {
     color: #2B283A;
 }
@@ -126,17 +128,22 @@ h3 {
     color: #D5D4D8;
 }
 
+.header--dark {
+    background-color: black;
+}
+
 .header--dark .header__toggler-slider {
     border-color: white;
     background-color: #F5F5F5;
+    justify-content: flex-end;
+}
+
+.header--dark .header__toggler-circle {
+    background-color: black;
 }
 
 .header--dark .header__toggler-dark {
     color: #FFFFFF;
-}
-
-.header--dark .header__toggler-slider {
-    justify-content: flex-end;
 }
 
 /* Main */
@@ -145,8 +152,8 @@ h3 {
     overflow: hidden;
     flex-grow: 1;
     padding: 50px 0;
-    background: #282d35;
-    color: #fff;
+    background-color: #fff;
+    color: #282d35;
 }
 
 .main:before {
