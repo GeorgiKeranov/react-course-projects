@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header(props) {
     return (
-        <header className="header header--dark">
+        <header className={props.darkMode ? 'header header--dark' : 'header'}>
             <div className="container">
                 <div className="header__logo">
                     <img src="./logo192.png" width="40" alt="logo"/>
