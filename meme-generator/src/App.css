@@ -94,6 +94,7 @@ body {
 
 .meme .meme__image h2 {
     position: absolute;
+    width: 90%;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);

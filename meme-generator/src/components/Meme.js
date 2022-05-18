@@ -1,15 +1,14 @@
 import React from 'react';
-import memesData from '../memesData';
 
 function Meme() {
+    const [memes, setMemes] = React.useState([]);
     const [meme, setMeme] = React.useState({
-        image: '',
-        topText: '',
-        bottomText: ''
+        image: 'https://i.imgflip.com/7bk2.jpg',
+        topText: 'Top text',
+        bottomText: 'Bottom text'
     });
 
     function generateRandomMeme() {
-        const memes = memesData.data.memes;
         const randomMemeIndex = Math.floor(Math.random() * memes.length);
         const randomMeme = memes[randomMemeIndex];
 
@@ -31,6 +30,18 @@ function Meme() {
             };
         });
     }
+
+    React.useEffect(() => {
+        fetch('https://api.imgflip.com/get_memes')
+            .then(response => response.json())
+            .then(response => {
+                if (!response.data.memes) {
+                    return;
+                }
+        
+                setMemes(response.data.memes);
+            });
+    }, []);
 
     return (
         <div className="meme">
