@@ -1,24 +1,34 @@
 import { useState } from 'react';
+import GameButton from './components/GameButton';
+import GameBoard from './components/GameBoard';
 import './App.css';
 
-function App() {
-  const [dices, setDices] = useState(generateRandomDices(10));
+function App() { 
+  const numberOfDices = 10;
+
+  const [allowedDiceNumber, setAllowedDiceNumber] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
+  const [dices, setDices] = useState(generateRandomDices(numberOfDices));
 
   function generateRandomDices(count) {
     const randomDices = [];
 
     for (let i = 0; i < count; i++) {
-      randomDices.push(Math.floor(Math.random() * 6) + 1);
+      randomDices.push({
+        id: i,
+        number: Math.floor(Math.random() * 6) + 1,
+        selected: false
+      });
     }
 
     return randomDices;
   }
 
-  const diceElements = dices.map((dice, index) => {
-    return (
-      <div key={index} className={`dice${index === 1 ? ' dice--selected' : ''}`}>{dice}</div>
-    );
-  });
+  function startNewGame() {
+    setDices(generateRandomDices(numberOfDices));
+    setAllowedDiceNumber(0);
+    setGameOver(false);
+  }
 
   return (
     <div className="container">
@@ -29,11 +39,18 @@ function App() {
           <p>Roll until all dice are the same. Click each dice to freeze it at its current value between rolls.</p>
         </div>
 
-        <div className="tenzies__board">
-          {diceElements}
-        </div>
+        <GameBoard
+          allowedDiceNumber={allowedDiceNumber}
+          dices={dices}
+          setAllowedDiceNumber={setAllowedDiceNumber}
+          setDices={setDices}
+          setGameOver={setGameOver} />
 
-        <button className="btn">Roll</button>
+        <GameButton
+          gameOver={gameOver}
+          setDices={setDices}
+          startNewGame={startNewGame}
+          setGameOver={setGameOver} />
       </div>
     </div>
   );
