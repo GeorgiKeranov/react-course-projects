@@ -14,9 +14,9 @@ function App() {
     return randomDices;
   }
 
-  const diceElements = dices.map(dice => {
+  const diceElements = dices.map((dice, index) => {
     return (
-      <div className="dice">{dice}</div>
+      <div key={index} className="dice">{dice}</div>
     );
   });
 
@@ -30,7 +30,7 @@ function App() {
         </div>
 
         <div className="tenzis__board">
-          {dices}
+          {diceElements}
         </div>
 
         <button className="btn">Roll</button>
