@@ -1,15 +1,4 @@
 export default function GameBoard(props) {
-  const diceElements = props.dices.map(dice => {
-    return (
-      <div
-        key={dice.id}
-        className={`dice${dice.selected ? ' dice--selected' : ''}`}
-        onClick={() => selectDice(dice)}>
-            {dice.number}
-      </div>
-    );
-  });
-  
   function selectDice(selectedDice) {
     let allowedDiceNumber = props.allowedDiceNumber;
     if (allowedDiceNumber === 0) {
@@ -40,6 +29,18 @@ export default function GameBoard(props) {
       return [...prevDices];
     });
   }
+
+  const diceElements = props.dices.map(dice => {
+    return (
+      <div
+        key={dice.id}
+        className={`dice${dice.selected ? ' dice--selected' : ''}`}
+        onClick={() => selectDice(dice)}
+      >
+        {dice.number}
+      </div>
+    );
+  });
 
   return (
     <div className="tenzies__board">
