@@ -30,18 +30,22 @@ export default function App() {
     }
     
     function updateNote(text) {
-        setNotes(oldNotes => {
-            const noteToUpdateIndex = oldNotes.findIndex(note => note.id === currentNoteId);
-            const noteToUpdate = oldNotes[noteToUpdateIndex];
+        setNotes(prevNotes => {
+            const noteToUpdateIndex = prevNotes.findIndex(note => note.id === currentNoteId);
+            const noteToUpdate = prevNotes[noteToUpdateIndex];
             // Remove the note from the notes array
-            oldNotes.splice(noteToUpdateIndex, 1);
+            prevNotes.splice(noteToUpdateIndex, 1);
 
             // Update the note
             noteToUpdate.body = text;
 
             // Return new array of notes with the updated one on the top
-            return [noteToUpdate, ...oldNotes];
+            return [noteToUpdate, ...prevNotes];
         })
+    }
+
+    function deleteNote(id) {
+        setNotes(prevNotes => prevNotes.filter(note => note.id != id));
     }
     
     function findCurrentNote() {
@@ -65,6 +69,7 @@ export default function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    deleteNote={deleteNote}
                 />
                 {
                     currentNoteId && 
