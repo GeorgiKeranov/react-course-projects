@@ -16,20 +16,20 @@ function App() {
 
   const diceElements = dices.map((dice, index) => {
     return (
-      <div key={index} className="dice">{dice}</div>
+      <div key={index} className={`dice${index === 1 ? ' dice--selected' : ''}`}>{dice}</div>
     );
   });
 
   return (
     <div className="container">
-      <div className="tenzis-game">
-        <div className="tenzis__text">
+      <div className="tenzies-game">
+        <div className="tenzies__text">
           <h1>Tenzies</h1>
           
           <p>Roll until all dice are the same. Click each dice to freeze it at its current value between rolls.</p>
         </div>
 
-        <div className="tenzis__board">
+        <div className="tenzies__board">
           {diceElements}
         </div>
 
