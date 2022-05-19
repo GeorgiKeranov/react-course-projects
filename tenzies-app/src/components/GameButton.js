@@ -1,5 +1,5 @@
 export default function GameButton(props) {
-  function rollNotSelectedDices() {
+  function rollDices() {
     props.setDices(prevDices => prevDices.map(dice => {
       if (dice.selected) {
         return dice;
@@ -13,6 +13,6 @@ export default function GameButton(props) {
   if (props.gameOver) {
     return <button onClick={props.startNewGame} className="btn">Start a new game</button>;
   } else {
-    return <button onClick={rollNotSelectedDices} className="btn">Roll</button>;
+    return <button onClick={rollDices} className="btn">Roll</button>;
   }
 }
