@@ -1,7 +1,6 @@
 # Switch Page Colors
 
-Super simple React application that you can change the whole page colors with one click of a button. You can read more about this application and view it from [here](/switch-page-colors).
-
+Super simple React application that you can change the whole page colors with one click of a button.
 ## Images
 
 Light Mode           |  Dark Mode Mode
